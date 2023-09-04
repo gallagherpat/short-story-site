@@ -5,3 +5,4 @@ console.log(data);
 
 </script>
 <h1>Newest {data.slug}</h1>
+
