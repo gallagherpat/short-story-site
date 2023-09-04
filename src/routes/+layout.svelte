@@ -1,7 +1,7 @@
 <script lang="ts">
 	import NavButton from './../components/navButton.svelte';
     import "../app.css";
-  import { onDestroy } from 'svelte';
+    import { onDestroy, onMount } from 'svelte';
     let navState = false;
     let navClass = 'hidden';
     let bgScrollPos = 'bg-orange-500'
@@ -16,11 +16,14 @@
         }
     }
 
-    window.addEventListener('scroll', handleScroll);
+    onMount(() => {
+        window.addEventListener('scroll', handleScroll);
 
-    onDestroy(() => {
-        window.removeEventListener('scroll', handleScroll);
+        onDestroy(() => {
+            window.removeEventListener('scroll', handleScroll);
+        })
     })
+
 
     const navClick: (event: MouseEvent) => void = function() {
         navState = !navState;
