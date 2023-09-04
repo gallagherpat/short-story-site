@@ -22,7 +22,7 @@
   <header class="sticky top-0 h-16 text-2xl bg-white drop-shadow-lg">
     <h1 class="absolute top-4 ml-4">Short Story</h1>
     <button on:click={navClick} class="absolute top-0 right-0 h-14 w-14 pr-4 pt-2">
-        <img src="./Hamburger_icon.png" alt="Hamburger icon">
+        <img src="/Hamburger_icon.png" alt="Hamburger icon">
     </button>
     <nav class={navClass}>
         <ul class="indent-4">

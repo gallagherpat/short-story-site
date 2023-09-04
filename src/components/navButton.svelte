@@ -19,15 +19,21 @@
     }
 </script>
 
-{#if name == 'home'}
+{#if name === 'home'}
 <li>
-    <a on:click={navClick} on:click={navigatedTo} href={`./`}>
+    <a on:click={navClick} on:click={navigatedTo} href='/'>
+    <div class={aClass}>{name}</div>
+    </a>
+</li> 
+{:else if name === 'newest'}
+<li>
+    <a on:click={navClick} on:click={navigatedTo} href={`/${name}/1`}>
     <div class={aClass}>{name}</div>
     </a>
 </li> 
 {:else}
 <li>
-    <a on:click={navClick} on:click={navigatedTo} href={`./${name}`}>
+    <a on:click={navClick} on:click={navigatedTo} href={`/${name}`}>
     <div class={aClass}>{name}</div>
     </a>
 </li> 
