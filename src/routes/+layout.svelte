@@ -1,16 +1,16 @@
-<script>
+<script lang="ts">
+	import NavButton from './../components/navButton.svelte';
     import "../app.css";
     let navState = false;
-    //let navClass = "absolute transform origin-top animate-scale-down top-16 bg-white rounded-b-2xl w-full drop-shadow-lg"
-    let navClass = 'hidden'
+    let navClass = 'hidden';
 
-    const navClick = function() {
+    const navClick: (event: MouseEvent) => void = function() {
         navState = !navState;
 
         if(navState){
             navClass = "absolute transform origin-top animate-scale-down top-16 pb-4 bg-white rounded-b-2xl w-full drop-shadow-lg"
         }else{
-            navClass = "hidden"
+            setTimeout(() => {navClass = 'hidden'}, 300)
         }
     }
 
@@ -25,22 +25,10 @@
         <img src="./Hamburger_icon.png" alt="Hamburger icon">
     </button>
     <nav class={navClass}>
-        <ul class="flex flex-col gap-4 indent-4">
-            <li>
-                <a href="./">
-                <div class="w-full">Home</div>
-                </a>
-            </li>
-            <li class="w-full">
-                <a href="./about">                
-                <div class="w-full">About</div>
-                </a>
-            </li>
-            <li class="w-full">
-                <a href="./">
-                <div class="w-full">Newest</div>
-                </a>
-            </li>
+        <ul class="indent-4">
+            <NavButton navClick={navClick} name="home"/>
+            <NavButton navClick={navClick} name="about"/>
+            <NavButton navClick={navClick} name="newest"/>
         </ul>
       </nav>
   </header>
