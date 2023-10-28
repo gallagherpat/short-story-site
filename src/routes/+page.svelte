@@ -36,9 +36,9 @@
     ]}
 </script>
     <section class="relative bg-orange-500 h-[42vh] z-10">
-            <div class="absolute inset-y-12 ml-4 w-11/12">
-                <h1 class="text-3xl font-bold" >Welcome to My Short Story</h1>
-                <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+            <div class="absolute inset-y-2 ml-4 w-11/12">
+                <h1 class="text-3xl font-bold" >Welcome to Tales From a Black Soul</h1>
+                <p>Read tales written by Patrick Gallagher, these tales are spin tingling fun to read at night before</p>
                 <button class="bg-black text-white w-36 h-12 rounded-full mt-4">Start Reading</button>
             </div>
     </section>
