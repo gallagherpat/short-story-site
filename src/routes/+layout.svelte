@@ -67,7 +67,7 @@
     <meta name="description">
   </svelte:head>
   <header class="sticky top-0 h-16 text-2xl transition-colors duration-300 {bgScrollPos} border-b-[1px] border-b-slate-800 z-20">
-    <h1 class="absolute top-4 pl-4">Short Story</h1>
+    <h1 class="absolute top-5 pl-2 text-xl">Tales from a Black Soul</h1>
     <button on:click={() => {navClick('hamburger')}} class="absolute top-0 right-0 h-14 w-14 pr-4 pt-2">
         <img src="/Hamburger_icon.png" alt="Hamburger icon">
     </button>
