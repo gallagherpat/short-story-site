@@ -35,8 +35,8 @@
     }
     ]}
 </script>
-    <section class="relative bg-orange-500 h-[42vh] z-10">
-            <div class="absolute inset-y-2 ml-4 w-11/12">
+    <section class="relative bg-orange-500 h-[26vh] z-10">
+            <div class="absolute inset-y-3 ml-4 w-11/12">
                 <h1 class="text-3xl font-bold" >Welcome to Tales From a Black Soul</h1>
                 <p>Read tales written by Patrick Gallagher, these tales are spin tingling fun to read at night before</p>
                 <button class="bg-black text-white w-36 h-12 rounded-full mt-4">Start Reading</button>
