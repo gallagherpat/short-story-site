@@ -6,6 +6,5 @@
     const html = marked.parse("# Marked in Node.js\n\nRendered by **marked**.")
     console.log(data);
 </script>
-
     <h1>Read {data.slug}</h1>
     {@html html}
