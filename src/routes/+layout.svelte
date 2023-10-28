@@ -7,7 +7,7 @@
     let navState = false;
     let navClass = 'hidden';
     let overlayClass = 'bg-transparent';
-    let hidden = '-z-20'
+    let hidden = 'invisible'
     let bgScrollPos: string;
     let path = $page.url.pathname;
 
@@ -40,19 +40,23 @@
             navClass = `absolute transform origin-top animate-scale-down top-16 pb-4 ${bgScrollPos} rounded-b-2xl w-full drop-shadow-lg z-10`
             hidden = ''
             overlayClass = 'bg-black';
+            document.body.classList.add('overflow-hidden');
         }else if (!navState && hamburger === 'hamburger'){
             navClass = `absolute transform origin-top animate-scale-up top-16 pb-4 ${bgScrollPos} rounded-b-2xl w-full drop-shadow-lg z-10`
             setTimeout(() => {
                 navClass = 'hidden'
                 overlayClass = 'bg-transparent'
-                hidden = '-z-20'
+                hidden = 'invisible'
             }, 99)
+            document.body.classList.remove('overflow-hidden');
+
         }
         else{
+            document.body.classList.remove('overflow-hidden');
             setTimeout(() => {
                 navClass = 'hidden'
                 overlayClass = 'bg-transparent'
-                hidden = '-z-20'
+                hidden = 'invisible'
             }, 200)
         }
     }
@@ -63,7 +67,7 @@
     <meta name="description">
   </svelte:head>
   <header class="sticky top-0 h-16 text-2xl transition-colors duration-300 {bgScrollPos} border-b-[1px] border-b-slate-800 z-20">
-    <h1 class="absolute top-4 ml-4">Short Story</h1>
+    <h1 class="absolute top-4 pl-4">Short Story</h1>
     <button on:click={() => {navClick('hamburger')}} class="absolute top-0 right-0 h-14 w-14 pr-4 pt-2">
         <img src="/Hamburger_icon.png" alt="Hamburger icon">
     </button>
